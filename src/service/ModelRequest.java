@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.*;
 
+import database.DbConnection;
+
 
 public class ModelRequest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,6 +26,7 @@ public class ModelRequest extends HttpServlet {
 		JSONObject result = new JSONObject();
 		JSONArray restaurantList = new JSONArray();
 		JSONObject restaurant = new JSONObject();
+		DbConnection DB = new DbConnection();
 		
 		restaurant.put("name", "Xam Buffet");
 		restaurant.put("ID", "15781345");
